@@ -18,6 +18,7 @@ This repo demonstrates:
 
 Repository structure
 --------------------
+```
 soda-db-workshop/
 ├── README.txt                      # (this file) workshop guide & instructions
 ├── requirements.txt                # Python dependencies
@@ -32,7 +33,8 @@ soda-db-workshop/
 ├── client_examples.ps1             # PowerShell examples (for Windows)
 ├── workshop_challenge.md           # Challenge prompt + rubric for attendees
 ├── .gitignore
-└── README.txt                      
+└── README.txt      
+```                
 
 Quick setup (Linux / macOS / WSL)
 ---------------------------------
