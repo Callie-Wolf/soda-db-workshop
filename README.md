@@ -128,7 +128,7 @@ Files and purpose
   - excludes .venv and students.db (recommended to create DB at runtime)
 
 # How to use the server
-Examples
+.:Examples:.
 --------------------------------
 
 ## Insert a student (Bash / Git Bash)
