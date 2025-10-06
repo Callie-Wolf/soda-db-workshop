@@ -127,26 +127,28 @@ Files and purpose
 - .gitignore
   - excludes .venv and students.db (recommended to create DB at runtime)
 
-How to use the server (examples)
+# How to use the server
+Examples
 --------------------------------
-# Insert a student (Bash / Git Bash)
+
+## Insert a student (Bash / Git Bash)
 ```
 curl -X POST http://127.0.0.1:8000/students \
   -H "Content-Type: application/json" \
   -d '{"name":"Lina Park","major":"AI","gpa":3.7}'
 ```
 
-# Query students (Bash)
+## Query students (Bash)
 ```
 curl "http://127.0.0.1:8000/students?gpa_min=3.6"
 ```
 
-# Parameterized raw query (safe)
+## Parameterized raw query (safe)
 ```
 curl "http://127.0.0.1:8000/raw-query?gpa_min=3.6"
 ```
 
-# Unsafe concatenation demo (do not use in prod)
+## Unsafe concatenation demo (do not use in prod)
 ```
 curl "http://127.0.0.1:8000/raw-query?gpa_min=3.6&unsafe=1"
 ```
