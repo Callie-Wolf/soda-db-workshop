@@ -39,19 +39,27 @@ soda-db-workshop/
 Quick setup (Linux / macOS / WSL)
 ---------------------------------
 # clone + virtual environment
+```
 git clone <repo-url>
 cd soda-db-workshop
 python -m venv .venv
 source .venv/bin/activate
+```
 
 # install deps
+```
 pip install -r requirements.txt
+```
 
 # create DB
+```
 python init_db.py
+```
 
 # run server (Flask)
+```
 python server_with_db.py
+```
 
 Server will run at: http://127.0.0.1:8000
 
@@ -59,6 +67,7 @@ Quick setup (Windows PowerShell)
 --------------------------------
 Open PowerShell in repo folder:
 
+```
 # create & activate venv
 python -m venv .venv
 # activate
@@ -72,12 +81,15 @@ python init_db.py
 
 # run server
 python server_with_db.py
+```
 
 PowerShell: Using client examples
 --------------------------------
 We included a PowerShell helper: client_examples.ps1. Run it after starting the server:
 
+```
 .\client_examples.ps1
+```
 
 This will:
 - POST /students with a sample student
@@ -118,31 +130,43 @@ Files and purpose
 How to use the server (examples)
 --------------------------------
 # Insert a student (Bash / Git Bash)
+```
 curl -X POST http://127.0.0.1:8000/students \
   -H "Content-Type: application/json" \
   -d '{"name":"Lina Park","major":"AI","gpa":3.7}'
+```
 
 # Query students (Bash)
+```
 curl "http://127.0.0.1:8000/students?gpa_min=3.6"
+```
 
 # Parameterized raw query (safe)
+```
 curl "http://127.0.0.1:8000/raw-query?gpa_min=3.6"
+```
 
 # Unsafe concatenation demo (do not use in prod)
+```
 curl "http://127.0.0.1:8000/raw-query?gpa_min=3.6&unsafe=1"
+```
 
 PowerShell equivalents are in client_examples.ps1
 
 How to view the DB table
 ------------------------
 Option A — view_db.py (recommended)
+```
 python view_db.py
+```
 
 Option B — using sqlite3 CLI (Git Bash / WSL)
+```
 sqlite3 students.db
 sqlite> .headers on
 sqlite> .mode column
 sqlite> SELECT * FROM Students;
+```
 
 Option C — GUI
 - DB Browser for SQLite: https://sqlitebrowser.org
