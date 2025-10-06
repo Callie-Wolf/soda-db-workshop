@@ -1,4 +1,4 @@
-SoDA — Database Fundamentals Workshop
+Database Fundamentals Workshop
 ====================================
 
 A complete, hands-on demo repository to teach Database Fundamentals for Software Engineering.
