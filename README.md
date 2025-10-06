@@ -2,8 +2,6 @@ SoDA — Database Fundamentals Workshop
 ====================================
 
 A complete, hands-on demo repository to teach Database Fundamentals for Software Engineering.
-This README contains detailed instructions, project structure, examples, and teaching notes you can
-use for your SoDA workshop (slides + live demo + hands-on challenge).
 
 Repository purpose
 ------------------
