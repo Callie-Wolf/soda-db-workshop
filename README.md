@@ -41,7 +41,12 @@ Quick setup (Linux / macOS / WSL)
 git clone <repo-url>
 cd soda-db-workshop
 python -m venv .venv
-source .venv/bin/activate
+```
+Activate the venv:
+```
+Windows (PowerShell)	.\.venv\Scripts\Activate.ps1
+Windows (Command Prompt)	.venv\Scripts\activate
+Linux / macOS / WSL (bash/zsh)	source .venv/bin/activate
 ```
 
 # install deps
