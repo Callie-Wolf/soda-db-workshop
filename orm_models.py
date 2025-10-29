@@ -46,3 +46,15 @@ if __name__ == "__main__":
     rows = demo_db.get_students_with_min_gpa(3.0)
     for r in rows:
         print(r.id, r.name, r.major, r.gpa)
+    
+class Course(Base):
+   __tablename__ = "Courses"
+   id = Column(Integer, primary_key=True)
+   title = Column(String(100))
+
+   def list_courses(self):
+       session = self.SessionLocal()
+       try:
+           return session.query(Course).order_by(Course.title).all()
+       finally:
+           session.close()
